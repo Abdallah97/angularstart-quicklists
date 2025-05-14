@@ -1,16 +1,16 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
-  styles: [],
+     <router-outlet />`,
+  imports: [RouterOutlet]
 })
-export class AppComponent {
-  title = 'angularstart-quicklists';
+    export class AppComponent {
+      title = 'my-angular-app';
+  constructor() {
+    console.log('AppComponent initialized');
+  }
 }
